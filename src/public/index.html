@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,user-scalable=no">
+    <title>My server!</title>
+  </head>
+
+  <style type="text/css">
+    /*********************************
+    ** video fluid width and height
+    ** from: https://envato.com/blog/video-background-html5-video/
+    **********************************/
+    .video {
+      position: fixed;
+      top: 50%; left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      /*z-index: 1;
+      opacity: 1;*/
+      transform: translate(-50%, -50%);
+    }
+
+    .overlayImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .button {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        font-size: 200%;
+        transform: translate(-50%, -50%);
+    }
+
+  </style>
+
+  <body>
+      <!--button type="button " class="button" id="start" width="30%" height="30%" ontouchstart="loadMedia()" onclick="loadMedia()">start client!</button-->
+      <button type="button " class="button" id="start" width="30%" height="30%" onclick="loadMedia()">start client!</button>
+      <!--audio id="assets/audio1.mp3" loop="1"></audio-->
+  </body>
+
+  <!-- MODERNIZR NEEDS TO BE CUSTOMIZED TO THE FEATURES I'M PLANNING TO SUPPORT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <!-- DETECTIZR NEEDS TO BE CUSTOMIZED TO THE FEATURES I'M PLANNING TO SUPPORT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/detectizr/2.2.0/detectizr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  <script src="util.js"></script>
+  <script src="actuators/actuator-audio.js"></script>
+  <script src="actuators/actuator-video.js"></script>
+  <script src="actuators/actuator-image.js"></script>
+  <script src="actuators/actuator-vibration.js"></script>
+  <script src="actuators/actuator-rgb-screen.js"></script>
+  <script src="sensors/sensor-motion.js"></script>
+  <script src="sensors/sensor-touch.js"></script>
+  <script src="sensors/sensor-mouse.js"></script>
+  <script src="client.js"></script>
+
+</html>
